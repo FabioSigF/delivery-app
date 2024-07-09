@@ -3,6 +3,8 @@
     <div class="flex gap-3 items-center w-full">
       <div class="px-3 py-2 border">
         <Logo />
+
+        <Button label="Entrar" severity="secondary" />
       </div>
     </div>
   </div>
@@ -11,11 +13,6 @@
 <script>
 import Logo from '../../components/Logo.vue';
 
-  export default {
-    
-  }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

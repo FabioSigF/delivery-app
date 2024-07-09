@@ -19,8 +19,8 @@ export default {
 
             // Shapes
             { 'shadow-lg': props.raised },
-            { 'rounded-md': !props.rounded, 'rounded-full': props.rounded },
-            { 'rounded-none first:rounded-l-md last:rounded-r-md': parent.instance.$name == 'InputGroup' },
+            { 'rounded-lg': !props.rounded, 'rounded-full': props.rounded }, //rounded 8px
+            { 'rounded-none first:rounded-l-lg last:rounded-r-lg': parent.instance.$name == 'InputGroup' }, //rounded 8px
 
             // Link Button
             { 'text-primary-600 bg-transparent border-transparent': props.link },
@@ -53,14 +53,14 @@ export default {
 
             // Secondary Button
             {
-                'text-surface-900 dark:text-white': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain,
-                'bg-surface-100 dark:bg-surface-700': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain,
-                'border border-surface-100 dark:border-surface-700': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain
+                'text-white': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain,
+                'bg-secondary': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain,
+                'border border-secondary': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain
             },
             // Secondary Text Button
-            { 'text-surface-500 dark:text-surface-300': props.text && props.severity === 'secondary' && !props.plain },
+            { 'text-secondary': props.text && props.severity === 'secondary' && !props.plain },
             // Secondary Outlined Button
-            { 'text-surface-500 dark:text-surface-300 border border-surface-500 hover:bg-surface-300/10': props.outlined && props.severity === 'secondary' && !props.plain },
+            { 'text-secondary border border-secondary': props.outlined && props.severity === 'secondary' && !props.plain },
 
             // Success Button
             {
@@ -146,10 +146,10 @@ export default {
             { 'hover:bg-primary-300/10': (props.text || props.outlined) && props.severity === null && !props.plain },
 
             // Secondary
-            { 'hover:bg-surface-200 dark:hover:bg-surface-600 hover:border-surface-200 dark:hover:border-surface-600': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain },
-            { 'focus:ring-surface-500 dark:focus:ring-surface-400': props.severity === 'secondary' },
+            { 'hover:bg-secondary-hover hover:border-secondary-hover': props.severity === 'secondary' && !props.text && !props.outlined && !props.plain },
+            { 'focus:ring-secondary': props.severity === 'secondary' },
             // Text & Outlined Button
-            { 'hover:bg-surface-300/10': (props.text || props.outlined) && props.severity === 'secondary' && !props.plain },
+            { 'hover:bg-secondary-300/10': (props.text || props.outlined) && props.severity === 'secondary' && !props.plain },
 
             // Success
             { 'hover:bg-green-600 dark:hover:bg-green-300 hover:border-green-600 dark:hover:border-green-300': props.severity === 'success' && !props.text && !props.outlined && !props.plain },
